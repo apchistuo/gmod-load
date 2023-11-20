@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>apchistuz loading Screen</title>
+        <style>
+            .background {
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-position:center;
+                background-size: cover;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="background"></body>
+
+    <script language="javascript">
+
+        var images = [
+            "https://media.discordapp.net/attachments/1097472696952041534/1176217276878438580/post-loadingscreen.png?ex=656e10b3&is=655b9bb3&hm=cb5838579182a39ffc6032b12ac7762a6d04e3411f64743fe42ac7bb3564ffa1&=&width=1202&height=676",
+        ];
+
+        document.body.style.backgroundImage = "url('" + images[ Math.floor( Math.random() * images.length ) ] + "')";
+
+    </script>
+    <script type="text/javascript">
+        
+      (function() {
+      var volume = 1;
+        $("audio").each(function(){ this.volume = volume/1; });
+      });
+    
+    </script>
+
+            <audio autoplay controls loop hidden id="audio">
+                <source src="" type="audio/ogg" volume="-1000">
+            </audio>
+
+            <script language="javascript">
+                var musicas = [
+                    "https://cdn.discordapp.com/attachments/1097472696952041534/1176220892196520038/synchobonk.ogg?ex=656e1411&is=655b9f11&hm=4069a4b569e1b4ec1b992c9f8f45ccad7fab212229daa17503e25683d6b450a6&",
+					"https://cdn.discordapp.com/attachments/1097472696952041534/1176222634980159599/blueprints.ogg?ex=656e15b1&is=655ba0b1&hm=aee21e4d9504f33a6b2ed94d69a4cf862805fd1164ca4475c66c0abe88eb000a&",
+                ];
+                var musica = musicas[Math.floor(Math.random()*musicas.length)]
+                document.getElementById('audio').src = musica
+                document.getElementById('audio').load()
+                document.getElementById('audio').play()
+            </script>
+
+</html>
